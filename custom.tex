@@ -1,0 +1,31 @@
+\author{Kristófer Reykjalín Þorláksson \& Stefán Óli Valdimarsson}  % My name, for the titlepage
+\title{Boltaþol}  % The title, for the titlepage
+\shorttitle{Boltaþol}
+\course{T-401-VELH Vélhlutafræði}
+\instructor{Indriði Sævar Ríkharðsson}
+
+% Change the graphics path if you are storing your graphics somewhere different
+\graphicspath{{graphics/}{Graphics/}{./}}
+
+\usepackage[backend=biber, bibencoding=utf8, style=ieee]{biblatex}
+%\DeclareLanguageMapping{american}{american-apa}  % needed for style=apa
+% If you set backend=bibtex, it will use bibtex for processing (old way)
+% if you set backend=biber, you can use UTF8 characters such as Þ and ð but you will have to remember to switch from using bibtex to biber in your client
+% See Chapter 7 of http://afs.rnd.ru.is/project/htgaru/trunk/how-to-get-around-projects.pdf 
+% If you just want to use bibtex directly without using BibLaTeX, then comment out the line.
+\addbibresource{references.bib}
+
+
+\usepackage[final,hidelinks]{hyperref} % must be last package loaded
+% it makes hyper-references (citations, URLs, etc) clickable
+
+
+% Add degree symbol to math
+\usepackage{gensymb}
+
+
+%\renewcommand*\tableofcontents{Efnisyfirlit}
+%
+%% Change text by figures from "Figure" to "Mynd"
+%\usepackage{caption}
+%\captionsetup[figure]{name = Mynd}
