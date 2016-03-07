@@ -9,7 +9,7 @@ Byrjað var á ytri greiningu samsetningarinnar. Því ytra álag á hana er sam
 	\label{eq::1}
 \end{equation}
 
-Í jöfnu \ref{eq::1} er allt fastar nema flatartregðuvægið, I. Með því að lækka flatartregðuvægið mun mesti kraftur sem platan þolir fyrir flot minnka og því er ákveðið að bora ekki í miðja plötuna. Þessi kraftur, $F_{y,p}$, er því notaður sem lágmark þegar stærð, staðsetning og fjöldi bolta er valin. Flatartregðuvægið fyrir ferhyrnt þversnið $I = {1 \over 12}bh^3$.
+Í jöfnu \ref{eq::1} er allt fastar nema flatartregðuvægið, I. Með því að lækka flatartregðuvægið mun mesti kraftur sem platan þolir fyrir flot minnka og því er ákveðið að bora ekki í miðja plötuna. Þessi kraftur, $F_{y,p}$, er því notaður sem lágmark þegar stærð, staðsetning og fjöldi bolta er valin. Því notum við það sem forsendur fyrir hönnun okkar að ef samsetningin í flot við minni kraft heldur en $F_{y,p}$ á einhverjum stað þá virkar sú hönnun ekki. Flatartregðuvægið fyrir ferhyrnt þversnið $I = {1 \over 12}bh^3$, því fæst sá kraftur sem lætur samsetninguna fara í flot í miðju er
 
 \[
 	F_{y,p} = \frac{4  \sigma_y I}{l h} = {\sigma_y b h^2 \over 3 l} = {210 MPa \cdot 5 mm \cdot \left(50mm\right)^2 \over 3 \cdot 200mm} = 4375N
@@ -43,7 +43,7 @@ Til að minnka beygjuspennu á yfirborði er ákveðið að hafa götin sem næs
 	
 Jafna \ref{eq::1} er notuð við þetta en nú er flatartregðuvægið minna vegna holunar. Flatartregðuvægið er því $I = {1 \over 12}bh^3 - {1 \over 12}bd^3$. Því er sá kraftur sem veldur floti
 \[
-F = \frac{4 \sigma I}{l h} = {4 \cdot 210 MPa \cdot  \left({1 \over 12} \cdot 5 mm \cdot \left(50mm\right)^3 - {1 \over 12} 5 mm \cdot \left(6mm\right)^3\right) \over (160 mm + 12 mm) \cdot 50 mm} = 5080N
+F = \frac{4 \sigma I}{l h} = {4 \cdot 210 MPa \cdot  \left({1 \over 12} \cdot 5 mm \cdot \left(50mm\right)^3 - {1 \over 12} 5 mm \cdot \left(6mm\right)^3\right) \over (160 mm + 12 mm) \cdot 50 mm} = \underline{5080N}
 \] 
 
 	\item Skerspenna í bolta
@@ -54,31 +54,84 @@ Jafna \ref{eq::2} er notuð til að finna skerkraftinn sem virkar á boltann
 F_1^{''} = F_2^{''} = {Mr_n \over 2r_n^2} = {{F \over 2}l \over 2 r_n} 
 \]
 
+Sá kraftur sem veldur því að skerspennan í boltanum fari uppí flotspennu
 
+\[
+\sigma = {F_1^{''} \over A_b} \Rightarrow F = {4 S_{sy} A_b r_n \over l} = {4 \cdot {660MPa \over \sqrt{3}} \cdot {\pi \left(6mm\right)^2 \over 4} \cdot 28 mm \over 200 mm} = \underline{6030N}
+\]
 
 	\item Leguspenna í efni
+	
+	Sá kraftur sem virkar á leguna er skerkrafturinn sem verkar á boltar, því verður leguspennan
+	
+\[
+\sigma = {F_1^{''} \over bd} \Rightarrow F = {4 \sigma_{y} b d r_n \over l} = {4 \cdot 210 MPa \cdot 5 mm \cdot 6 mm \cdot 28 mm \over 200mm} = \underline{3528N}
+\]
 \end{itemize}
 
+Hér að ofan sést að sá kraftur sem veldur floti í legum efnisins er lægri en $F_{y,p}$ og því virkar þessu hönnun ekki miðað við það forsendur sem við gáfum okkar.
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.5\textwidth]{2x6}
-	\caption{Fyrsta reiknaða tilvik}
+	\caption{Fyrsta reiknað tilvik}
 	\label{fig::2x6}
 \end{figure}
 
 \subsubsection{Annað tilvik}
+
+Vegna þess að fyrsta tilvik gékk ekki útaf leguspennum var athuga hvort 8 mm gat í stað 6 mm myndi standast forsendur okkar, sjá mynd \ref{fig::2x8}. Vegna því að aðeins ein breyting var gerð reiknast annað tilvikið líkt og það fyrsta.
+
+\begin{itemize}
+	\item Beygjaspenna á yfirborði við göt
+	
+	\[
+	F = \frac{4 \sigma I}{l h} = {4 \cdot 210 MPa \cdot  \left({1 \over 12} \cdot 5 mm \cdot \left(50mm\right)^3 - {1 \over 12} 5 mm \cdot \left(8mm\right)^3\right) \over (160 mm + 12 mm) \cdot 50 mm} = \underline{5066N}
+	\] 
+	
+	\item Skerspenna í bolta
+	
+	Á sama hátt og í fyrsta tilviki fæst sá kraftur sem veldur því að skerspennan í boltanum fari uppí flotspennu
+	
+	\[
+	\sigma = {F_1^{''} \over A_b} \Rightarrow F = {4 S_{sy} A_b r_n \over l} = {4 \cdot {660MPa \over \sqrt{3}} \cdot {\pi \left(8mm\right)^2 \over 4} \cdot 28 mm \over 200 mm} = \underline{10726N}
+	\]
+	
+	\item Leguspenna í efni
+	
+	Sá kraftur sem virkar á leguna er skerkrafturinn sem verkar á boltar, því verður leguspennan
+	
+	\[
+	\sigma = {F_1^{''} \over bd} \Rightarrow F = {4 \sigma_{y} b d r_n \over l} = {4 \cdot 210 MPa \cdot 5 mm \cdot 8 mm \cdot 28 mm \over 200mm} = \underline{4704N}
+	\]
+
 \begin{figure}
 	\centering
 	\includegraphics[width=0.5\textwidth]{2x8}
-	\caption{Annað reiknaða tilvik}
+	\caption{Annað reiknað tilvik}
 	\label{fig::2x8}
 \end{figure}
 
+\end{itemize}
+
+Eftir þessa breytingu fara leguspennur ekki í flot við kraft lægri en $F_{y,p}$ og því eru forsendurnar uppfylltar. Aftur á móti munar ekki miklu á kraftinum sem veldur floti í legum og $F_{y,p}$. Því er þriðja hönnunin gerð.
+
 \subsubsection{Þriðja tilvik}
+
+Aðeins flóknari hönnun er gerð í þriðja skiptið. Þá eru fjórir boltar notaðir í stað tveggja, sjá mynd \ref{fig::4x6}.
+
+\begin{itemize}
+	\item Beygjaspenna á yfirborði við göt
+	
+	Sá kraftur sem veldur floti fæst með jöfnu \ref{eq::1}. Eina breyting frá fyrri tilvikum er flatartregðuvægið, í þetta skiptið þarf að nota reglu Steiner's. Út frá því fæst að flatartregðuvægið er $I = {1 \over 12}bh^3 -\left({1 \over 12}bd^3 - x^2(bd)\right)$. Í þessu tilfelli er x fjarlægðin frá láréttum miðás stykksins í miðju 
+	
+	\item Skerspenna í bolta
+	\item Leguspenna í efni
+\end{itemize}
+
 \begin{figure}
 	\centering
 	\includegraphics[width=0.5\textwidth]{4x6}
-	\caption{Þriðja reiknaða tilvik}
+	\caption{Þriðja reiknað tilvik}
 	\label{fig::4x6}
 \end{figure}
