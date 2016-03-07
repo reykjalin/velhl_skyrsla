@@ -25,14 +25,40 @@ Byrjað var á ytri greiningu samsetningarinnar. Því ytra álag á hana er sam
 	\item Leguspenna sem verkar á efnið í götunum
 \end{enumerate}
 
-Til að minnka beygjuspennu á yfirborði er ákveðið að hafa götin sem næst lóðréttum brúnum samsetningarinnar. Með því er vægisarmurinn frá undirstöðunum styttur, sem minnkar beygjuspennuna sbr. jöfnu \ref{eq::1}. Við þetta hækkar skerspennan í boltum og leguspennan í götum efnisins. Til að koma til móts við þessa spennuhækkun er ákveðið að hafa götin sem fjærst lágréttum brúnum samsetningarinnar, við það munu þær spennur lækkar, sbr. jöfnu \ref{eq::2}.
+Til að minnka beygjuspennu á yfirborði er ákveðið að hafa götin sem næst lóðréttum brúnum samsetningarinnar. Með því er vægisarmurinn frá undirstöðunum styttur, sem minnkar beygjuspennuna sbr. jöfnu \ref{eq::1}. Við þetta hækkar skerspennan í boltum og leguspennan í götum efnisins. Til að koma til móts við þessa spennuhækkun er ákveðið að hafa götin sem fjærst lágréttum brúnum samsetningarinnar, við það munu þær spennur lækkar, sbr. jöfnu \ref{eq::2}\cite{shigleys}.
 
 \begin{equation}
 	F_n^{''} = {M r_n \over \displaystyle\sum_{i=1}^{k} r_i^2}
 	\label{eq::2}
 \end{equation}
 
-Þar sem $F_n^{''}$ er skerkraftur sem verkar á bolta n sem er í fjarlægð $r_n$ frá flatarmiðju boltanna og k er fjöldi bolta í samsetningunni. Með þessu er hægt að finna leguspennu sem virkar á efnið og skerspennu sem virka á boltana. Reiknað voru þrjú tilvik af mismunandi samsetningu.
+Þar sem $F_n^{''}$ er skerkraftur sem verkar á bolta n sem er í fjarlægð $r_n$ frá flatarmiðju boltanna og k er fjöldi bolta í samsetningunni. Með þessu er hægt að finna leguspennu sem virkar á efnið og skerspennu sem virka á boltana. Reiknað voru þrjú tilvik af mismunandi samsetningu. Reiknað var í hverju tilfelli kraftinn sem olli því að fyrrnefndar spennur færu í flot.
+
+\subsubsection{Fyrsta tilvik}
+
+Í upphafi var einföld hönnun valin, sjá mynd \ref{fig::2x6}. Vegna samhverfum um miðju er nóg að reikna aðeins fyrir annan boltann.
+
+\begin{itemize}
+	\item Beygjaspenna á yfirborði við göt
+	
+Jafna \ref{eq::1} er notuð við þetta en nú er flatartregðuvægið minna vegna holunar. Flatartregðuvægið er því $I = {1 \over 12}bh^3 - {1 \over 12}bd^3$. Því er sá kraftur sem veldur floti
+\[
+F = \frac{4 \sigma I}{l h} = {4 \cdot 210 MPa \cdot  \left({1 \over 12} \cdot 5 mm \cdot \left(50mm\right)^3 - {1 \over 12} 5 mm \cdot \left(6mm\right)^3\right) \over (160 mm + 12 mm) \cdot 50 mm} = 5080N
+\] 
+
+	\item Skerspenna í bolta
+
+Jafna \ref{eq::2} er notuð til að finna skerkraftinn sem virkar á boltann
+
+\[
+F_1^{''} = F_2^{''} = {Mr_n \over 2r_n^2} = {{F \over 2}l \over 2 r_n} 
+\]
+
+
+
+	\item Leguspenna í efni
+\end{itemize}
+
 
 \begin{figure}
 	\centering
@@ -41,16 +67,18 @@ Til að minnka beygjuspennu á yfirborði er ákveðið að hafa götin sem næs
 	\label{fig::2x6}
 \end{figure}
 
+\subsubsection{Annað tilvik}
 \begin{figure}
 	\centering
-	\includegraphics[width=0.5\textwidth]{2x6}
+	\includegraphics[width=0.5\textwidth]{2x8}
 	\caption{Annað reiknaða tilvik}
 	\label{fig::2x8}
 \end{figure}
 
+\subsubsection{Þriðja tilvik}
 \begin{figure}
 	\centering
-	\includegraphics[width=0.5\textwidth]{2x6}
+	\includegraphics[width=0.5\textwidth]{4x6}
 	\caption{Þriðja reiknaða tilvik}
 	\label{fig::4x6}
 \end{figure}
