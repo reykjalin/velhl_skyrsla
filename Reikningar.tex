@@ -149,7 +149,7 @@ Með þessu er hægt að finna leguspennu sem verkar á efnið og skerspennu sem
 
 \item Leguspenna í efni
   
-  Sá kraftur sem virkar á leguna er skerkrafturinn sem verkar á bolta, því verður leguspennan
+  Sá kraftur sem verkar á leguna er skerkrafturinn sem verkar á bolta, því verður leguspennan
   
   \[
   \sigma 
@@ -166,7 +166,7 @@ Með þessu er hægt að finna leguspennu sem verkar á efnið og skerspennu sem
   \]
 \end{itemize}
 
-Hér að ofan sést að sá kraftur sem veldur floti í legum efnisins er lægri en $F_{y,p}$ og því virkar þessu hönnun ekki miðað við þær forsendur sem við gáfum okkar.
+Hér að ofan sést að sá kraftur sem veldur floti í legum efnisins er lægri en $F_{y,p}$ og því virkar þessu hönnun ekki miðað við þær forsendur sem við gáfum okkur.
 
 \begin{figure}
   \centering
@@ -265,9 +265,9 @@ Vegna samhverfu dugir að reikna aðeins fyrir aðra hlið stykkisins og aðeins
 \item Beygjaspenna á yfirborði við göt
   
   Sá kraftur sem veldur floti fæst með jöfnu \ref{eq::1}. 
-  Eina breyting frá fyrri tilvikum er flatartregðuvægið, í þetta skiptið þarf að nota reglu Steiner's. 
-  Út frá því fæst að flatartregðuvægið er $I = {1 \over 12}bh^3 - 2\left({1 \over 12}bd^3)\right)$. 
-  Flatartregðuvægið er því
+  Eina breyting frá fyrri tilvikum er flatartregðuvægið. 
+  Í þessu tilfelli er flatartregðuvægið $I = {1 \over 12}bh^3 - 2\left({1 \over 12}bd^3\right)$. 
+  Sá kraftur sem veldur floti á yfirborði plötu er því.
   
   \[
   F = \frac{4 \sigma I}{l h} 
@@ -332,7 +332,7 @@ Vegna samhverfu dugir að reikna aðeins fyrir aðra hlið stykkisins og aðeins
   Líkt og áður þá er það skerkrafturinn sem verkar á boltana sem verkar á legu efnisins, því verður leguspenna í efninu
   
   \[
-  \sigma = {F_n^{''} \over bd} 
+  \sigma = {F_1^{''} \over bd} 
   \Rightarrow F
   = {8 \sigma_{y} b d r_n \over l} 
   = {
@@ -348,6 +348,14 @@ Vegna samhverfu dugir að reikna aðeins fyrir aðra hlið stykkisins og aðeins
 Við þessa hönnun fæst að sá kraftur sem veldur floti er töluvert hærri en viðmiðunarkrafturinn $F_{y,p}$ í öllum tilvikum. 
 Því er þessi hönnun valin og smíðað eftir teikningu sem sjá má á mynd \ref{fig::smidamynd}.
 
+Við smíði voru notaðir fjórir 8.8 M6x40 boltar. Gætt var að því að gengjur boltanna séu ekki staðsettar á samskeytum platnanna. Forspennukrafturinn var reiknaður sem $ 75\% $ af prufuálagi boltanna, \te 
+$F_i = 0.75 \sigma_p A_t = 0.75 \cdot 600 MPa \cdot 20.1 mm^2 = 9045N$. Gengjurnar voru smurðar við herslu boltanna, því er hersluvægið sem þarf til að ná forspennukraftinum 
+
+\[
+T = K F_i d = 0.18 \cdot 9045N \cdot 6mm = 9.8 Nm
+\]
+
+Við semsetningu var hert 10 Nm með hjálp herslumælis.
 
 \begin{figure}
   \centering
