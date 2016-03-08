@@ -297,7 +297,7 @@
     }
     {\large
       \vfil
-      <mánaðardagur> mars 2016\\
+      \today \\
     	\ifthenelse{\boolean{svn}}{SVN Revision \svnrev}{}  
       \vfil
     }
